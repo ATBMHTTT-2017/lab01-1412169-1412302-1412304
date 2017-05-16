@@ -1,4 +1,0 @@
-
-# sample file
-hothaohien
-abcxyz
