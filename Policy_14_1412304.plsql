@@ -29,7 +29,7 @@ EXECUTE sa_label_admin.create_label ('ACCESS_CHITIEU',14200,'BM:LU,QL,VL:');
 BEGIN
 sa_policy_admin.apply_table_policy
 (policy_name => 'ACCESS_CHITIEU',
-schema_name => 'bt_dba',
+schema_name => 'sys_bt1',
 table_name => 'CHITIEU',
 table_options => 'NO_CONTROL');
 END;
@@ -84,13 +84,13 @@ END;
 BEGIN
 sa_policy_admin.remove_table_policy
 (policy_name => 'ACCESS_CHITIEU',
-schema_name => 'bt_dba',
+schema_name => 'sys_bt1',
 table_name => 'CHITIEU');
 END;
 BEGIN
 sa_policy_admin.apply_table_policy
 (policy_name => 'ACCESS_CHITIEU',
-schema_name => 'bt_dba',
+schema_name => 'sys_bt1',
 table_name => 'CHITIEU',
 table_options =>
 'READ_CONTROL,WRITE_CONTROL,CHECK_CONTROL');
