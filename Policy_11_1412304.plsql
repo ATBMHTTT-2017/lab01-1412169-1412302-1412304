@@ -15,13 +15,13 @@ END;
 BEGIN
 sa_policy_admin.remove_table_policy
 (policy_name => 'ACCESS_DUAN',
-schema_name => 'bt_dba',
+schema_name => 'sys_bt1',
 table_name => 'CHITIEU');
 END;
 BEGIN
 sa_policy_admin.apply_table_policy
 (policy_name => 'ACCESS_DUAN',
-schema_name => 'bt_dba',
+schema_name => 'sys_bt1',
 table_name => 'CHITIEU',
 table_options =>
 'READ_CONTROL,WRITE_CONTROL,CHECK_CONTROL');
