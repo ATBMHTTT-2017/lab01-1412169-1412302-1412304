@@ -2,21 +2,29 @@
 create or replace procedure CapNhatThongTin_TruongCN (maPhongCN in varchar2, tenPhongnew in varchar2, soNhanViennew in int)
 AS
 machinhanh varchar2(5);
+num number;
 BEGIN
-  Select maCN into machinhanh from ChiNhanh where truongChiNhanh = USER;
-  if (machinhanh != NULL) then
+  Select count(*) into num from ChiNhanh where truongChiNhanh = USER;
+  if (num>0) then
+  begin
+      Select macn into machinhanh from ChiNhanh where truongChiNhanh = USER;
     update PhongBan set tenPhong = tenPhongnew, soNhanVien = soNhanViennew where chiNhanh = machinhanh and maPhong = maPhongCN;
-    end if;
+  end;
+  end if;
+    commit;
 END;
-  
+
 create or replace procedure CapNhatThongTin_TruongPhong (tenPhongnew in varchar2, soNhanViennew in int)
 AS
-maphongnew varchar2(5);
+phong varchar2(5);
+num number;
 BEGIN
-  Select maPhong into maphongnew from PhongBan where truongPhong = USER;
-  if (maphongnew != NULL) then
-    update PhongBan set tenPhong = tenPhongnew, soNhanVien = soNhanViennew where maPhong = maphongnew;
-    end if;
+  Select count(*) into num from PhongBan where truongPhong = USER;
+  if (num>0) then
+  begin
+      Select maPhong into phong from PhongBan where truongPhong = USER;
+      update PhongBan set tenPhong = tenPhongnew, soNhanVien = soNhanViennew where maPhong = phong;
+      end;
+  end if;
+  commit;
 END;
-grant execute on CapNhatThongTin_TruongCN to Truong_CN_CTY;
-grant execute on CapNhatThongTin_TruongPhong to Truong_Phong_CTY;
