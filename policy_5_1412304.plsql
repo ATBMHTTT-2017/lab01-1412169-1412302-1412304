@@ -18,6 +18,5 @@ BEGIN
     update PhongBan set tenPhong = tenPhongnew, soNhanVien = soNhanViennew where maPhong = maphongnew;
     end if;
 END;
-
 grant execute on CapNhatThongTin_TruongCN to Truong_CN_CTY;
 grant execute on CapNhatThongTin_TruongPhong to Truong_Phong_CTY;
