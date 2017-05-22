@@ -12,17 +12,17 @@ Thành viên:
 Sinh viên check vào các mục bên dưới và ghi mã sinh viên đã làm vào chức năng theo mẫu. Mục nào ko có MSSV là tính điểm theo nhóm. Cần sắp xếp các chức năng bên dưới theo thứ tự MSSV đã thực hiện.
 
 Yêu cầu **GIT**
-* [ ] Có sử dụng GIT.
-* [ ] Sử dụng GIT theo Centralized Workflow.
-* [ ] Sử dụng GIT theo Feature Branch Workflow.
-* [ ] Sử dụng GIT theo Gitflow Workflow.
+* [X] Có sử dụng GIT.
+* [X] Sử dụng GIT theo Centralized Workflow.
+* [X] Sử dụng GIT theo Feature Branch Workflow.
+* [X] Sử dụng GIT theo Gitflow Workflow.
 
 Yêu cầu **bắt buộc**
 * [ ] Viết script tạo cấu trúc cơ sở dữ liệu (**1412169**)
 * [ ] Viết script thêm dữ liệu (**1412169**)
 * [ ] Tạo tài khoản cho các nhân viên trong bảng Nhân Viên. Tên tài khoản trùng với mã nhân viên. Tạo ít nhất 5 tài khoản cho mỗi vị trí: trưởng dự án, trưởng phòng, trưởng chi nhánh, nhân viên, giám đốc và ít nhất 5 dòng cho các bảng dữ liệu còn lại. (**1412302**)
 * [ ] Tạo các role cho các vị trí phù hợp cho công ty. (**1412302**)
-* [ ] Chỉ trưởng phòng được phép cập nhật và thêm thông tin vào dự án (**1412169**). ()
+* [ ] Chỉ trưởng phòng được phép cập nhật và thêm thông tin vào dự án. (**1412169**)
 * [ ] Giám đốc được phép xem thông tin dự án gồm (mã dự án, tên dự án, kinh phí, tên phòng chủ trì, tên chi nhánh chủ trì, tên trưởng dự án và tổng chi) (DAC). (**1412302**)
 * [ ] Chỉ trưởng phòng, trưởng chi nhánh được cấp quyền thực thi stored procedure cập nhật thông tin phòng ban của mình (DAC). (**1412304**)
 * [ ] Tất cả nhân viên bình thường (trừ trưởng phòng, trưởng chi nhánh và các trưởng dự án) chỉ được phép xem thông tin nhân viên trong phòng của mình, chỉ được xem lương của bản thân (VPD). (**1412169**)
@@ -31,12 +31,12 @@ Yêu cầu **bắt buộc**
 * [ ] Mỗi dự án trong công ty có các mức độ nhạy cảm được đánh dấu bao gồm “Thông thường”, “Giới hạn”, “Bí mật”, “Bí mật cao”. Mỗi dự án có thể thuộc quyền quản lý của tổng công ty hoặc của 1 trong 3 chi nhánh “Tp.Hồ Chí Minh”, “Hà Nội”, “Đà Nẵng”. Mỗi dự án có thể liên quan đến các phòng ban: “Nhân sự”, “Kế toán”, “Kế hoạch” (OLS).
     * [ ] Tạo các thành phần policy. (**1412304**)
     * [ ] Trưởng chi nhánh được phép truy xuất tất cả dữ liệu chi tiêu của dự án của tất cả các phòng ban thuộc quyền quản lý của mình. (**MSSV**) (**1412304**)
-    * [ ] Trưởng chi nhánh Hà Nội được phép truy xuất dữ liệu của chi nhánh Hà Nội và tất cả các chi nhánh khác. (**MSSV**)
-    * [ ] Trưởng phòng được phép đọc dữ liệu dự án của tất cả phòng ban nhưng chỉ được phép ghi dữ liệu dự án thuộc phòng của mình. (**MSSV**)
-    * [ ] Nhân viên chỉ được đọc dữ liệu dự mình tham gia.  (**MSSV**)
+    * [ ] Trưởng chi nhánh Hà Nội được phép truy xuất dữ liệu của chi nhánh Hà Nội và tất cả các chi nhánh khác. (**1412304**)
+    * [ ] Trưởng phòng được phép đọc dữ liệu dự án của tất cả phòng ban nhưng chỉ được phép ghi dữ liệu dự án thuộc phòng của mình. (**1412302**)
+    * [ ] Nhân viên chỉ được đọc dữ liệu dự mình tham gia.  (**1412169**)
 * [ ] Mỗi thông tin thu chi sẽ được đánh dấu các mức độ “Nhạy cảm”, “Không nhạy cảm”, “Bí mật” và thuộc các nhóm như “Lương”, “Quản lý”, “Vật liệu” (OLS).
-    * [ ] Nhân viên phụ trách đủ các lĩnh vực, có cấp độ phù hợp mới được phép truy xuất dữ liệu thu chi. (**MSSV**)
-    * [ ] Ngoài ra, mỗi thông tin thu chi còn quy định cấp “Quản lý” hay “Nhân viên” để xác định dữ liệu này thuộc cấp quản lý của nhân viên hay quản lý dự án. Quản lý có thể xem tất cả thông tin thu chi của nhân viên. (**MSSV**)
+    * [ ] Nhân viên phụ trách đủ các lĩnh vực, có cấp độ phù hợp mới được phép truy xuất dữ liệu thu chi. (**1412304**)
+    * [ ] Ngoài ra, mỗi thông tin thu chi còn quy định cấp “Quản lý” hay “Nhân viên” để xác định dữ liệu này thuộc cấp quản lý của nhân viên hay quản lý dự án. Quản lý có thể xem tất cả thông tin thu chi của nhân viên. (**1412304**)
 
 Liệt kê các **yêu cầu nâng cao** đã thực hiện:
 * [ ] Chức năng 1
