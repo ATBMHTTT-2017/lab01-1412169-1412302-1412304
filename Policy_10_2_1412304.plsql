@@ -17,7 +17,13 @@ EXECUTE sa_label_admin.create_label ('ACCESS_CHITIEU',16200,'NC:VL:NV');
 EXECUTE sa_label_admin.create_label ('ACCESS_CHITIEU',17000,'BM:LU:NV');
 EXECUTE sa_label_admin.create_label ('ACCESS_CHITIEU',17100,'BM:QL:NV');
 EXECUTE sa_label_admin.create_label ('ACCESS_CHITIEU',17200,'BM:VL:NV');
-
+--XÓA CHÍNH SÁCH
+BEGIN
+sa_policy_admin.remove_table_policy
+(policy_name => 'ACCESS_CHITIEU',
+schema_name => 'bt_dba',
+table_name => 'CHITIEU');
+END;
 --gan nhan cho khong nhay cam cho cac du lieu vat lieu va group la nhan vien
 update chitieu set ols_chitieu=char_to_label ('ACCESS_CHITIEU', 'KNC:VL:NV')
 WHERE MACHITIEU = 'CT101' OR MACHITIEU='CT104' OR MACHITIEU='CT107' OR MACHITIEU='CT110';
@@ -67,13 +73,8 @@ def_label => 'BM:LU,QL,VL:QL',
 row_label => '');
 END;
 
---XÓA CHÍNH SÁCH VÀ APPLY LẠI
-BEGIN
-sa_policy_admin.remove_table_policy
-(policy_name => 'ACCESS_CHITIEU',
-schema_name => 'bt_dba',
-table_name => 'CHITIEU');
-END;
+--APPLY LẠI CHÍNH SÁCH
+
 BEGIN
 sa_policy_admin.apply_table_policy
 (policy_name => 'ACCESS_CHITIEU',
@@ -82,4 +83,3 @@ table_name => 'CHITIEU',
 table_options =>
 'READ_CONTROL,WRITE_CONTROL,CHECK_CONTROL');
 END;
-

@@ -80,6 +80,3 @@ table_name => 'CHITIEU',
 table_options =>
 'READ_CONTROL,WRITE_CONTROL,CHECK_CONTROL');
 END;
-
-
-
