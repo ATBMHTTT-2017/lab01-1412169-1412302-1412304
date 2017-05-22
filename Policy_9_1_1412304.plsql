@@ -66,6 +66,3 @@ EXECUTE sa_label_admin.create_label ('ACCESS_DUAN',45000,'BMC:KH:HCM');
 EXECUTE sa_label_admin.create_label ('ACCESS_DUAN',46000,'BMC:NS:HN');
 EXECUTE sa_label_admin.create_label ('ACCESS_DUAN',47000,'BMC:KT:HN');
 EXECUTE sa_label_admin.create_label ('ACCESS_DUAN',48000,'BMC:KH:HN');
-
-
-
